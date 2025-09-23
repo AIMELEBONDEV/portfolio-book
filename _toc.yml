@@ -1,0 +1,38 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: notebooks/intro
+title: Portfolio de Compétences - Data Engineering & Analytics 
+
+parts:
+  - caption: Présentation
+    chapters:
+    - file: content/competences
+      title: Mes Compétences
+    - file: content/remerciements
+      title: Remerciements
+
+  - caption: Projets Data Engineering
+    chapters:
+    - file: notebooks/projet1_nba_docker
+      title: "Projet 1: NBA Analytics avec Docker & PostgreSQL"
+    - file: notebooks/projet2_immo_fabric
+      title: "Projet 2: Données Immobilières avec Microsoft Fabric"
+    - file: notebooks/projet4_turbines_fabric
+      title: "Projet 4: Production Éolienne - Architecture Médaillon"
+    
+
+  - caption: Projets Business Intelligence
+    chapters:
+    - file: notebooks/projet3_lakers_powerbi
+      title: "Projet 3: Dashboard Lakers avec Power BI"
+    - file: notebooks/projet5_portefeuille_financier
+      title: "Projet 5: Analyse de Portefeuille Financier"
+
+  - caption: Conclusion & Annexes
+    chapters:
+    - file: notebooks/conclusion
+      title: Conclusion et Perspectives
+    - file: content/annexes
+      title: Annexes 

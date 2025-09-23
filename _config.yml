@@ -1,0 +1,56 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Portfolio de Compétences Data
+author: Votre Nom
+# logo: images/logo.png  # Décommentez quand vous ajoutez un logo
+copyright: "2024"
+
+# Force re-execution of notebooks on each build.
+execute:
+  execute_notebooks: cache
+  timeout: 300
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: portfolio_competences.tex
+
+# Add a bibtex file so that we can create citations
+# bibtex_bibfiles:
+#   - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/votre-username/Document_de_competence  # Le URL de votre repo
+  path_to_book: .  # Chemin vers votre book dans le repo
+  branch: main  # La branche à utiliser
+
+# Add GitHub buttons to your book
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  navbar_number_sections: false
+
+# Parse and render settings
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
+
+# Execution settings
+sphinx:
+  config:
+    html_theme_options:
+      repository_url: https://github.com/votre-username/Document_de_competence
+      use_repository_button: true

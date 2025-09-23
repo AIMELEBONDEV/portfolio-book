@@ -1,0 +1,27 @@
+# Jupyter Book et environnement
+jupyter-book
+jupyterlab
+notebook
+ipykernel
+
+# Manipulation de données
+pandas
+numpy
+
+# Visualisation
+matplotlib
+seaborn
+plotly
+
+# Connexion aux APIs et web
+requests
+yfinance   # pour ton portefeuille financier (Yahoo Finance)
+
+# Bases de données
+sqlalchemy
+psycopg2-binary   # PostgreSQL (Docker / projet NBA)
+pyodbc            # SQL Server (Power BI)
+sqlite-utils      # SQLite (si besoin)
+
+# Export (PDF, HTML, etc.)
+pyppeteer
