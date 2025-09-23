@@ -1,0 +1,1 @@
+* Langages : Python, SQL, DAX
