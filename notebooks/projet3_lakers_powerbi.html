@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Portfolio de Compétences Data</title>
+    <title> &#8212; Portfolio de Compétences</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -58,10 +58,11 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/projet3_lakers_powerbi';</script>
+    <link rel="icon" href="../_static/profile.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="projet5_portefeuille_financier.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="projet4_turbines_fabric.html" />
+    <link rel="next" title="" href="projet5_portefeuille_financier.html" />
+    <link rel="prev" title="" href="projet4_turbines_fabric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,7 +150,7 @@
   
   
   
-    <p class="title logo__title">Portfolio de Compétences Data</p>
+    <p class="title logo__title">Portfolio de Compétences</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -165,7 +166,27 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../content/competences.html">Mes Compétences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/formations_experiences.html">Formations &amp; Expériences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projets Data Engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="projet1_nba_docker.html">NBA Analytics avec Docker &amp; PostgreSQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet2_immo_fabric.html">Données Immobilières avec Microsoft Fabric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet4_turbines_fabric.html">Production Éolienne - Architecture Médaillon</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projets Business Intelligence</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dashboard Lakers avec Power BI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet5_portefeuille_financier.html">Analyse de Portefeuille Financier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contactez-moi</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion &amp; Contact</a></li>
+</ul>
+
     </div>
 </nav></div>
     </div>
@@ -207,7 +228,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/votre-username/Document_de_competence" target="_blank"
+<a href="https://github.com/AIMELEBONDEV/portfolio-book" target="_blank"
    class="btn btn-sm btn-source-repository-button"
    title="Source repository"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -304,9 +325,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -317,19 +336,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -339,7 +350,97 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  
+  <!-- PROJET LAKERS -->
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="project-card">
+  <!-- TITRE CENTRÉ -->
+  <h1 style="text-align:center; color:#004aad; margin-bottom:25px;">
+    Analyse des performances des Lakers (NBA API 2020–2025)
+  </h1>
+  <!-- IMAGE ARCHITECTURE -->
+  <div class="project-image">
+  <img width="937" height="356" alt="image" src="https://github.com/user-attachments/assets/b9117a91-842d-4455-9585-ea35f7d1be7f" />
+  </div>
+  <!-- TEXTE -->
+  <p>
+    Passionné par le basketball et supporter des <strong>Los Angeles Lakers</strong>, 
+    j’ai conçu ce projet pour suivre et analyser les performances de la franchise.  
+    Les données sont extraites directement depuis l’<em>API officielle de la NBA</em>, 
+    couvrant les équipes, les joueurs et les matchs sur 5 saisons (2020 à 2025).  
+    La base de données est conçue pour s’actualiser automatiquement au fil du temps 
+    (par exemple en 2026 et au-delà).
+  </p>
+  <p>
+    L’objectif principal est de comprendre ce qui contribue aux victoires des Lakers, 
+    à travers l’étude des <em>statistiques collectives de l’équipe</em> (points, passes décisives, 
+    rebonds, interceptions, contres, turnovers) et des <em>performances individuelles des joueurs</em>.  
+    Le projet combine une architecture de collecte et de stockage robuste avec une couche d’analyse 
+    interactive (rapports et visualisations).
+  </p>
+  <!-- IMAGE RAPPORT -->
+  <div class="project-image">
+    <img src="images/report_lakers.png" 
+         alt="Extrait du rapport Lakers" style="max-width:65%; height:auto;">
+    <img width="892" height="496" alt="image" src="https://github.com/user-attachments/assets/c555afdf-761f-44f7-bcd2-b8061e7e5ba5" />
+  </div>
+  <!-- BOUTONS DE LIEN -->
+  <div class="project-links">
+    <a href="https://github.com/AIMELEBONDEV/nba-lakers-project/tree/main" 
+       target="_blank" class="project-btn">Voir le dépôt</a>
+    <a href="https://github.com/AIMELEBONDEV/nba-lakers-project/blob/main/README.md" 
+       target="_blank" class="project-btn">Voir le notebook</a>
+  </div>
+</div>
+<style>
+.project-card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+}
+
+.project-card p {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  text-align: justify; /* ✅ texte justifié */
+}
+
+.project-image img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-btn {
+  background-color: #004aad;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.project-btn:hover {
+  background-color: #1e90ff;
+}
+</style>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -376,7 +477,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title"></p>
       </div>
     </a>
     <a class="right-next"
@@ -384,7 +485,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title"></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -395,21 +496,6 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
-              
             
           </div>
           <footer class="bd-footer-content">
@@ -419,7 +505,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By Votre Nom
+By The Jupyter Book community
 </p>
 
   </div>
@@ -429,7 +515,7 @@ By Votre Nom
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -442,6 +528,19 @@ By Votre Nom
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <div style="background-color:#123456; color:white; padding:10px; width:23cm; display:flex; justify-content:space-between; align-items:center; font-size:0.85em; border-radius:5px;">
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="images/ADJEGUEDE_PHOTO.jpg" alt="Photo" style="height:40px; width:40px; border-radius:50%;">
+    <span>💻 Retrouvez-moi sur : 
+      <a href="https://www.linkedin.com/in/aimeadjeguede/" target="_blank" style="color:white; text-decoration:none; margin:0 5px;">LinkedIn</a> |
+      <a href="https://github.com/AIMELEBONDEV" target="_blank" style="color:white; text-decoration:none; margin:0 5px;">GitHub</a>
+    </span>
+  </div>
+  <span>© 2025 Aimé ADJEGUEDE</span>
+</div>
+
+</div>
   </div>
   
 </div>
