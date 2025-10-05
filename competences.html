@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aimé Adjeguede - Portfolio Data Engineer & Analyst</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/profile.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Styles supplémentaires pour la page compétences */
+    .skills-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .skill-item {
+      margin-bottom: 32px;
+    }
+    
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    
+    .skill-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    
+    .skill-percentage {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    .skill-tools {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    
+    .progress-bar-container {
+      height: 12px;
+      background: rgba(0,74,173,0.1);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      border-radius: 100px;
+      transition: width 2s ease-out;
+      width: 0;
+    }
+    
+    .tech-tags-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin: 40px 0;
+    }
+    
+    .tech-category {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .tech-category h3 {
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      font-size: 1.3rem;
+    }
+    
+    .tech-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .tech-list li {
+      padding: 8px 0;
+      color: var(--text-medium);
+      font-size: 1.05rem;
+    }
+    
+    .tech-list li::before {
+      content: '▸';
+      color: var(--primary);
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    
+    .experience-timeline {
+      position: relative;
+      padding-left: 40px;
+      margin: 40px 0;
+    }
+    
+    .experience-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+    }
+    
+    .experience-card {
+      position: relative;
+      background: white;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 32px;
+      transition: all 0.4s ease;
+    }
+    
+    .experience-card:hover {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .experience-card::before {
+      content: '';
+      position: absolute;
+      left: -52px;
+      top: 40px;
+      width: 16px;
+      height: 16px;
+      background: var(--primary);
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+    
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .experience-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: white;
+      padding: 8px;
+    }
+    
+    .experience-info h3 {
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    
+    .experience-company {
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .experience-period {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+    
+    .experience-description {
+      color: var(--text-medium);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    
+    .experience-achievements {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    
+    .experience-achievements li {
+      padding: 8px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--text-medium);
+      line-height: 1.7;
+    }
+    
+    .experience-achievements li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/ADJEGUEDE_PHOTO.jpg" alt="AA">
+        <span>Aimé Adjeguede</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="competences.html" class="nav-link">Compétences</a></li>
+        <li><a href="experiences.html" class="nav-link">Expériences</a></li>
+        <li><a href="projets.html" class="nav-link">Projets</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="hero" style="min-height: 50vh; padding-top: 140px;">
+    <div class="container" style="text-align: center;">
+      <div class="section-badge">Mon profil</div>
+      <h1 class="hero-title">Compétences & Parcours</h1>
+      <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
+        Une expertise technique complète combinée à une solide expérience en entreprise
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES TECHNIQUES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-badge">Stack Technique</div>
+      <h2 class="section-title">Compétences Techniques</h2>
+      
+      <div class="skills-container">
+        <div class="skill-item" data-aos="fade-right">
+          <div class="skill-header">
+            <div>
+              <div class="skill-name">📊 Analyse & Visualisation</div>
+              <div class="skill-tools">Power BI, Tableau, Seaborn, Matplotlib</div>
+            </div>
+            <div class="skill-percentage">90%</div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="skill-header">
+            <div>
+              <div class="skill-name">🗄️ Bases de Données</div>
+              <div class="skill-tools">SQL, PostgreSQL, MySQL, BigQuery</div>
+            </div>
+            <div class="skill-percentage">85%</div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="skill-header">
+            <div>
+              <div class="skill-name">🐍 Python</div>
+              <div class="skill-tools">Data Analysis, Machine Learning, NLP</div>
+            </div>
+            <div class="skill-percentage">80%</div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-aos="fade-right" data-aos-delay="300">
+          <div class="skill-header">
+            <div>
+              <div class="skill-name">☁️ Cloud & Data Engineering</div>
+              <div class="skill-tools">GCP, Dataflow, BigQuery, Docker</div>
+            </div>
+            <div class="skill-percentage">75%</div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-aos="fade-right" data-aos-delay="400">
+          <div class="skill-header">
+            <div>
+              <div class="skill-name">⚡ Microsoft Fabric & DBT</div>
+              <div class="skill-tools">Modern Data Stack</div>
+            </div>
+            <div class="skill-percentage">60%</div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" data-width="60"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTRES COMPÉTENCES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-badge">Technologies Complémentaires</div>
+      <h2 class="section-title">Autres Connaissances</h2>
+      <p style="text-align: center; font-size: 1.1rem; color: var(--text-light); margin-bottom: 40px;">
+        Expériences ponctuelles ou bases solides acquises au fil des projets
+      </p>
+
+      <div class="tech-tags-grid">
+        <div class="tech-category" data-aos="fade-up">
+          <h3>Langages</h3>
+          <ul class="tech-list">
+            <li>R</li>
+            <li>Java</li>
+          </ul>
+        </div>
+
+        <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+          <h3>Big Data</h3>
+          <ul class="tech-list">
+            <li>Spark</li>
+            <li>Hadoop</li>
+            <li>Kafka</li>
+          </ul>
+        </div>
+
+        <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+          <h3>Machine Learning</h3>
+          <ul class="tech-list">
+            <li>Random Forest</li>
+            <li>XGBoost</li>
+            <li>Deep Learning</li>
+          </ul>
+        </div>
+
+        <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+          <h3>Outils & Autres</h3>
+          <ul class="tech-list">
+            <li>MongoDB</li>
+            <li>Power Automate</li>
+            <li>Power Apps</li>
+            <li>Looker Studio & LookML</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFT SKILLS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-badge">Compétences Transverses</div>
+      <h2 class="section-title">Soft Skills & Langues</h2>
+
+      <div class="expertise-grid">
+        <div class="expertise-card" data-aos="fade-up">
+          <div class="expertise-icon">🎯</div>
+          <h3>Analyse & Synthèse</h3>
+          <p>Transformer des données complexes en insights clairs et actionnables pour la décision</p>
+        </div>
+
+        <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="expertise-icon">💬</div>
+          <h3>Communication</h3>
+          <p>À l'aise avec les équipes métiers, techniques et les managers pour aligner vision et exécution</p>
+        </div>
+
+        <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="expertise-icon">🚀</div>
+          <h3>Autonomie & Proactivité</h3>
+          <p>Capable de mener des projets de bout en bout avec initiative et sens des responsabilités</p>
+        </div>
+
+        <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="expertise-icon">🔧</div>
+          <h3>Résolution de problèmes</h3>
+          <p>Réduction des anomalies grâce à l'automatisation et l'optimisation continue</p>
+        </div>
+      </div>
+
+      <div class="highlight-card" style="margin-top: 48px;" data-aos="fade-up">
+        <h3>🌍 Langues</h3>
+        <div style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px; margin-top:20px;">
+          <div style="text-align:center;">
+            <div style="font-size:1.5rem; font-weight:700; color:var(--primary);">Français</div>
+            <div style="color:var(--text-light);">Natif</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:1.5rem; font-weight:700; color:var(--primary);">Anglais</div>
+            <div style="color:var(--text-light);">B2 - Professionnel</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:1.5rem; font-weight:700; color:var(--primary);">Ewe, Yoruba, Haoussa</div>
+            <div style="color:var(--text-light);">Courant</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CERTIFICATIONS -->
+<section class="section">
+  <div class="container">
+    <div class="section-badge">Certifications</div>
+    <h2 class="section-title">Certifications Professionnelles</h2>
+
+    <div class="experience-timeline" style="padding-left: 0;">
+      
+      <!-- Certification Power BI -->
+      <div class="experience-card" data-aos="fade-left" style="margin-left: 0;">
+        <div class="experience-header">
+          <div style="display:flex; gap: 20px; align-items:flex-start; flex:1;">
+            <img src="images/microsoft-logo.png" alt="Microsoft" class="experience-logo" onerror="this.style.display='none'">
+            <div class="experience-info">
+              <div class="experience-company">Microsoft</div>
+              <h3>Power BI Data Analyst</h3>
+              <div class="experience-period">Juillet 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="experience-description">
+          Certification attestant de ma capacité à transformer des données brutes en informations exploitables,
+          créer des visualisations dynamiques et percutantes, et contribuer à une prise de décision éclairée.
+        </p>
+
+        <ul class="experience-achievements">
+          <li><strong>Compétences validées :</strong> Analyse des données, Power BI, Excel, Power Query</li>
+          <li><strong>Visualisation avancée :</strong> Création de dashboards clairs et engageants</li>
+          <li><strong>Data Engineering :</strong> Optimisation des processus analytiques</li>
+        </ul>
+
+        <div style="margin-top: 20px;">
+          <a href="https://coursera.org/share/a8396664e4a70bc9d8218b930b2c48bb" 
+             target="_blank" 
+             class="btn btn-primary">
+            Voir le certificat →
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification IBM -->
+      <div class="experience-card" data-aos="fade-left" style="margin-left: 0;">
+        <div class="experience-header">
+          <div style="display:flex; gap: 20px; align-items:flex-start; flex:1;">
+            <img src="images/ibm-logo.png" alt="IBM" class="experience-logo" onerror="this.style.display='none'">
+            <div class="experience-info">
+              <div class="experience-company">IBM</div>
+              <h3>Data Science Professional Certificate</h3>
+              <div class="experience-period">Avril 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="experience-description">
+          Certification professionnelle IBM couvrant l'ensemble de la stack Data Science,
+          de Python aux techniques avancées de Machine Learning et visualisation.
+        </p>
+
+        <ul class="experience-achievements">
+          <li><strong>Compétences validées :</strong> Python, SQL, Web Scraping, Data Science</li>
+          <li><strong>Visualisation & Analyse :</strong> Visualisation des données, analyse exploratoire</li>
+          <li><strong>Machine Learning :</strong> Algorithmes supervisés et non supervisés</li>
+          <li><strong>Data Engineering :</strong> Pipelines de données et preprocessing avancé</li>
+        </ul>
+
+        <div style="margin-top: 20px;">
+          <a href="https://coursera.org/share/e95b6b5b694e3cecf582c368c12cf7f5" 
+             target="_blank" 
+             class="btn btn-primary">
+            Voir le certificat →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2 class="cta-title">Intéressé par mon profil ?</h2>
+      <p class="cta-text">
+        Discutons de comment cette expertise peut servir vos projets data.
+      </p>
+      <div class="cta-buttons">
+        <a href="mailto:adjeguedeaime@gmail.com" class="btn btn-white btn-lg">🚀 Contactez-moi</a>
+        <a href="projets.html" class="btn btn-outline btn-lg">Voir mes projets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="images/ADJEGUEDE_PHOTO.jpg" alt="AA" class="footer-avatar">
+          <div>
+            <p class="footer-name">Aimé Adjeguede</p>
+            <p class="footer-title">Data Engineer & Analyst</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/aimeadjeguede/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/AIMELEBONDEV" target="_blank">GitHub</a>
+          <a href="mailto:adjeguedeaime@gmail.com">Email</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2025 Aimé Adjeguede. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Animation des barres de progression
+    const observerSkills = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const width = bar.getAttribute('data-width');
+          setTimeout(() => {
+            bar.style.width = width + '%';
+          }, 200);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.progress-bar-fill').forEach(bar => {
+      observerSkills.observe(bar);
+    });
+  </script>
+</body>
+</html>

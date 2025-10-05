@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aimé Adjeguede - Portfolio Data Engineer & Analyst</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/profile.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Styles spécifiques à la page projets */
+    .project-detail {
+      max-width: 1000px;
+      margin: 0 auto 80px;
+      background: white;
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .project-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    
+    .project-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    
+    .project-subtitle {
+      font-size: 1.3rem;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+    
+    .tech-stack {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 32px 0;
+    }
+    
+    .tech-badge {
+      padding: 8px 16px;
+      background: linear-gradient(135deg, rgba(0,74,173,0.1), rgba(30,144,255,0.1));
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .tech-badge:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .project-section {
+      margin: 48px 0;
+    }
+    
+    .project-section h2 {
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .section-icon {
+      font-size: 2rem;
+    }
+    
+    .project-image {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      margin: 24px 0;
+      transition: all 0.4s ease;
+    }
+    
+    .project-image:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .two-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    
+    .info-card {
+      background: var(--bg-secondary);
+      padding: 24px;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .info-card h3 {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, rgba(0,74,173,0.05), rgba(30,144,255,0.05));
+      padding: 32px;
+      border-radius: 16px;
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text-medium);
+    }
+    
+    .features-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .features-list li {
+      padding: 12px 0;
+      padding-left: 32px;
+      position: relative;
+      font-size: 1.05rem;
+      color: var(--text-medium);
+    }
+    
+    .features-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    
+    .project-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/ADJEGUEDE_PHOTO.jpg" alt="AA">
+        <span>Aimé Adjeguede</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="competences.html" class="nav-link">Compétences</a></li>
+        <li><a href="experiences.html" class="nav-link">Expériences</a></li>
+        <li><a href="projets.html" class="nav-link">Projets</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="hero" style="min-height: 60vh; padding-top: 140px;">
+    <div class="container" style="text-align: center;">
+      <div class="section-badge">Portfolio</div>
+      <h1 class="hero-title">Mes Projets Data</h1>
+      <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
+        Une sélection de projets démontrant mes compétences en Data Engineering, 
+        Business Intelligence et analyse de données.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJET 1 - LAKERS -->
+  <section id="lakers" class="section">
+    <div class="project-detail" data-aos="fade-up">
+      <div class="project-header">
+        <div class="project-tag">Business Intelligence</div>
+        <h1 class="project-title">Analyse des performances des Lakers</h1>
+        <p class="project-subtitle">NBA API 2020–2025 | Power BI | PostgreSQL</p>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech-badge">Power BI</span>
+        <span class="tech-badge">NBA API</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Docker</span>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">🎯</span>Contexte & Objectifs</h2>
+        <div class="two-columns">
+          <div class="info-card">
+            <h3>Le Défi</h3>
+            <p>En tant que passionné de basketball et supporter des Lakers, j'ai voulu créer un outil pour analyser en profondeur les facteurs de victoire de l'équipe.</p>
+          </div>
+          <div class="info-card">
+            <h3>L'Objectif</h3>
+            <p>Comprendre ce qui contribue aux victoires des Lakers à travers l'analyse des statistiques collectives et individuelles sur 5 saisons.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">🏗️</span>Architecture Technique</h2>
+        <img src=images/Lakers_project.png
+             alt="Architecture NBA" 
+             class="project-image">
+        <ul class="features-list">
+          <li>Extraction automatisée des données via l'API officielle NBA</li>
+          <li>Base PostgreSQL avec modélisation en schéma étoile</li>
+          <li>Actualisation automatique des données futures (2026+)</li>
+          <li>Dashboards Power BI interactifs pour l'analyse</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">📊</span>Résultats & Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">85%</div>
+            <p class="stat-label">Taux de victoire au-delà de 110 points</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">+12</div>
+            <p class="stat-label">Différentiel d'assists en victoire</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5 ans</div>
+            <p class="stat-label">De données analysées</p>
+          </div>
+        </div>
+
+        <img src="images/Lakers_Dashboard.png" 
+             alt="Dashboard Lakers" 
+             class="project-image">
+      </div>
+
+      <div class="project-links">
+        <a href="https://github.com/AIMELEBONDEV/nba-lakers-project" target="_blank" class="btn btn-primary btn-lg">
+          📂 Voir le code
+        </a>
+        <a href="https://github.com/AIMELEBONDEV/nba-lakers-project/blob/main/README.md" target="_blank" class="btn btn-outline btn-lg" style="border: 2px solid var(--primary); color: var(--primary);">
+          📖 Documentation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJET 2 - IMMOBILIER -->
+  <section id="immo" class="section section-alt">
+    <div class="project-detail" data-aos="fade-up">
+      <div class="project-header">
+        <div class="project-tag">Data Engineering</div>
+        <h1 class="project-title">Analyse Immobilière DVF</h1>
+        <p class="project-subtitle">Microsoft Fabric | Architecture Médaillon | 20M+ lignes</p>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech-badge">Microsoft Fabric</span>
+        <span class="tech-badge">BigQuery</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Power BI</span>
+        <span class="tech-badge">SQL</span>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">🎯</span>Contexte & Objectifs</h2>
+        <p style="font-size: 1.1rem; color: var(--text-medium); line-height: 1.8;">
+          Ce projet s'appuie sur les données DVF publiques (plus de 20 millions de lignes) afin d'analyser
+          le marché immobilier français. Les données sont traitées à travers une architecture en médaillon 
+          (bronze → silver → gold), nettoyées et modélisées sous forme de schéma en étoile.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">🏗️</span>Pipeline de Données</h2>
+        <img src="images/pipelineimmo.png" 
+             alt="Architecture Médaillon" 
+             class="project-image">
+        <ul class="features-list">
+          <li>Architecture médaillon : Bronze (brut) → Silver (nettoyé) → Gold (modélisé)</li>
+          <li>Traitement de plus de 20 millions de transactions immobilières</li>
+          <li>Modélisation en schéma en étoile pour optimiser les requêtes</li>
+          <li>Rapports Power BI sur les tendances temporelles et géographiques</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">📊</span>Visualisations</h2>
+        <img src="images/Analyse_immo.png" 
+             alt="Dashboard Immobilier" 
+             class="project-image">
+      </div>
+
+      <div class="project-links">
+        <a href="https://github.com/AIMELEBONDEV/Immobilier_data" target="_blank" class="btn btn-primary btn-lg">
+          📂 Voir le code
+        </a>
+        <a href="https://github.com/AIMELEBONDEV/Immobilier_data/blob/main/README.md" target="_blank" class="btn btn-outline btn-lg" style="border: 2px solid var(--primary); color: var(--primary);">
+          📖 Documentation
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJET 3 - ÉOLIENNES -->
+  <section id="turbines" class="section">
+    <div class="project-detail" data-aos="fade-up">
+      <div class="project-header">
+        <div class="project-tag">Data Engineering</div>
+        <h1 class="project-title">Monitoring Parc Éolien</h1>
+        <p class="project-subtitle">Microsoft Fabric | Pipelines automatisés | Alerting</p>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech-badge">Microsoft Fabric</span>
+        <span class="tech-badge">Dataflows</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">Power BI</span>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">🎯</span>Contexte & Objectifs</h2>
+        <p style="font-size: 1.1rem; color: var(--text-medium); line-height: 1.8;">
+          Projet visant à traiter, analyser et monitorer les données d'un parc de trois éoliennes. 
+          Les données sont collectées toutes les dix minutes depuis des capteurs, avec une architecture 
+          complète d'ingestion, transformation et monitoring automatisé.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">🏗️</span>Architecture</h2>
+        <img src="images/Pipeline_Production_Energies.png" 
+             alt="Architecture Éoliennes" 
+             class="project-image">
+        <ul class="features-list">
+          <li>Pipelines automatisés pour récupération quotidienne des données</li>
+          <li>Dataflows pour transformations sans code</li>
+          <li>Notebooks SQL/Python pour transformations avancées</li>
+          <li>Alerting via Teams/Outlook en cas d'anomalies</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2><span class="section-icon">📊</span>Dashboard de Production</h2>
+        <img src="images/Daily_power_production.png" 
+             alt="Dashboard Éoliennes" 
+             class="project-image">
+      </div>
+
+      <div class="project-links">
+        <a href="https://github.com/AIMELEBONDEV/Wind_Power_Productions" target="_blank" class="btn btn-primary btn-lg">
+          📂 Voir le code
+        </a>
+        <a href="https://github.com/AIMELEBONDEV/Wind_Power_Productions/blob/main/README.md" target="_blank" class="btn btn-outline btn-lg" style="border: 2px solid var(--primary); color: var(--primary);">
+          📖 Documentation
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- PROJET 5 - PORTFOLIO FINANCE -->
+<section id="finance" class="section section-alt">
+  <div class="project-detail" data-aos="fade-up">
+    <div class="project-header">
+      <div class="project-tag">Business Intelligence</div>
+      <h1 class="project-title">Analyse de Portefeuille Financier</h1>
+      <p class="project-subtitle">Yahoo Finance API | Python | Power BI</p>
+    </div>
+
+    <div class="tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Yahoo Finance API</span>
+      <span class="tech-badge">Power BI</span>
+      <span class="tech-badge">Parquet</span>
+      <span class="tech-badge">Finance</span>
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">🎯</span>Contexte & Objectifs</h2>
+      <p style="font-size: 1.1rem; color: var(--text-medium); line-height: 1.8;">
+        Analyse et visualisation de la performance d'un portefeuille financier sur 5 ans,
+        combinant actions, cryptomonnaies et indices. Le projet répond à trois questions clés :
+        l'évolution des actifs, leur contribution à la performance globale, et la visualisation
+        de la dynamique du portefeuille pour en tirer des insights actionnables.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">🏗️</span>Architecture & Pipeline</h2>
+      <img src="https://github.com/user-attachments/assets/0d84b68c-e88d-44c0-a20e-add6b6e74581" 
+           alt="Architecture du projet finance" 
+           class="project-image">
+      
+      <h3 style="color: var(--primary-dark); margin: 24px 0 16px; font-size: 1.3rem;">Pipeline de Données</h3>
+      <ul class="features-list">
+        <li>Extraction des historiques d'actifs via l'API Yahoo Finance</li>
+        <li>Transformation : calcul des indicateurs financiers (daily return, volatilité, Sharpe ratio, drawdown, moyennes mobiles 50/200)</li>
+        <li>Stockage au format Parquet pour ingestion optimisée dans Power BI</li>
+        <li>Visualisation : dashboards interactifs sur 2 pages (analyse par actif + performance globale)</li>
+      </ul>
+
+      <img src="https://github.com/user-attachments/assets/d71efece-4d32-4384-92c2-db38a13c2ef6" 
+           alt="Organisation du projet" 
+           class="project-image">
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">📊</span>Résultats & Dashboards</h2>
+      
+      <h3 style="color: var(--primary); margin: 24px 0 16px;">Page 1 : Analyse par Actif</h3>
+      <p style="font-size: 1.05rem; color: var(--text-medium); line-height: 1.7; margin-bottom: 20px;">
+        Filtrage des actifs du portefeuille pour analyser leurs performances individuelles,
+        avec cartes de valeur actuelle, graphiques d'évolution (daily return, volatilité, Sharpe, drawdown),
+        TriMap des parts relatives et suivi de l'alpha sur 60 jours.
+      </p>
+      <img src="https://github.com/user-attachments/assets/8c1c3511-1ba0-4843-9814-13c9a098bdc9" 
+           alt="Dashboard Page 1 - Analyse par actif" 
+           class="project-image">
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">1.48</div>
+          <p class="stat-label">Croissance du portefeuille (5 ans)</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">$17</div>
+          <p class="stat-label">Daily return moyen</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">0.03</div>
+          <p class="stat-label">Volatilité 20 jours</p>
+        </div>
+      </div>
+
+      <h3 style="color: var(--primary); margin: 40px 0 16px;">Page 2 : Performance Globale & Benchmarking</h3>
+      <p style="font-size: 1.05rem; color: var(--text-medium); line-height: 1.7; margin-bottom: 20px;">
+        Comparaison des classes d'actifs (Actions 50%, Cryptos 29.29%, Indices 20.16%),
+        analyse de la performance globale, alpha sur 60 jours, et observation de la volatilité
+        relative entre les différentes catégories d'investissement.
+      </p>
+      <img src="https://github.com/user-attachments/assets/7d220e4e-5838-436a-af8f-e2de0f341f94" 
+           alt="Dashboard Page 2 - Performance globale" 
+           class="project-image">
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">$15,366</div>
+          <p class="stat-label">Valeur actuelle du portefeuille</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2.97%</div>
+          <p class="stat-label">Croissance globale</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">-0.22</div>
+          <p class="stat-label">Sharpe ratio (20j)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">💡</span>Insights & Valeur Ajoutée</h2>
+      <ul class="features-list">
+        <li>Identification des actifs contribuant le plus à la performance</li>
+        <li>Visualisation de la dynamique globale du portefeuille et de son risque</li>
+        <li>Comparaison multi-années des différentes classes d'actifs</li>
+        <li>Outil exploitable pour investisseurs afin de suivre l'évolution en temps réel</li>
+      </ul>
+
+      <div class="info-card" style="margin-top: 32px; background: linear-gradient(135deg, rgba(0,74,173,0.05), rgba(30,144,255,0.05)); border-left: 4px solid var(--primary); padding: 24px; border-radius: 12px;">
+        <h3 style="color: var(--primary-dark); margin-bottom: 12px;">🚀 Évolutions Futures</h3>
+        <ul style="margin: 0; padding-left: 20px; color: var(--text-medium);">
+          <li>Intégration d'un entrepôt SQL Server pour centraliser les données</li>
+          <li>Pipeline CI/CD pour automatiser la récupération et le traitement</li>
+          <li>Application web Django pour consultation dynamique (investisseurs, journalistes)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a href="https://github.com/AIMELEBONDEV/Financial_wallet" target="_blank" class="btn btn-primary btn-lg">
+        📂 Voir le code
+      </a>
+      <a href="https://github.com/AIMELEBONDEV/Financial_wallet/blob/main/README.md" target="_blank" class="btn btn-outline btn-lg" style="border: 2px solid var(--primary); color: var(--primary);">
+        📖 Documentation
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2 class="cta-title">Intéressé par ces projets ?</h2>
+      <p class="cta-text">
+        Discutons de comment je peux apporter cette expertise à votre organisation.
+      </p>
+      <div class="cta-buttons">
+        <a href="mailto:adjeguedeaime@gmail.com" class="btn btn-white btn-lg">🚀 Contactez-moi</a>
+        <a href="index.html" class="btn btn-outline btn-lg">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="images/ADJEGUEDE_PHOTO.jpg" alt="AA" class="footer-avatar">
+          <div>
+            <p class="footer-name">Aimé Adjeguede</p>
+            <p class="footer-title">Data Engineer & Analyst</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/aimeadjeguede/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/AIMELEBONDEV" target="_blank">GitHub</a>
+          <a href="mailto:adjeguedeaime@gmail.com">Email</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2025 Aimé Adjeguede. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

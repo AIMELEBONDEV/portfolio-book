@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aimé Adjeguede - Portfolio Data Engineer & Analyst</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/profile.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .experience-timeline {
+      position: relative;
+      padding-left: 40px;
+      margin: 40px 0;
+    }
+    
+    .experience-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+    }
+    
+    .experience-card {
+      position: relative;
+      background: white;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 32px;
+      transition: all 0.4s ease;
+    }
+    
+    .experience-card:hover {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .experience-card::before {
+      content: '';
+      position: absolute;
+      left: -52px;
+      top: 40px;
+      width: 16px;
+      height: 16px;
+      background: var(--primary);
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+    
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .experience-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: white;
+      padding: 8px;
+    }
+    
+    .experience-info h3 {
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    
+    .experience-company {
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .experience-period {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+    
+    .experience-description {
+      color: var(--text-medium);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    
+    .experience-achievements {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    
+    .experience-achievements li {
+      padding: 8px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--text-medium);
+      line-height: 1.7;
+    }
+    
+    .experience-achievements li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .experience-timeline {
+        padding-left: 20px;
+      }
+      
+      .experience-card::before {
+        left: -32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/ADJEGUEDE_PHOTO.jpg" alt="AA">
+        <span>Aimé Adjeguede</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="competences.html" class="nav-link">Compétences</a></li>
+        <li><a href="experiences.html" class="nav-link active">Expériences</a></li>
+        <li><a href="projets.html" class="nav-link">Projets</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="hero" style="min-height: 50vh; padding-top: 140px;">
+    <div class="container" style="text-align: center;">
+      <div class="section-badge">Mon parcours</div>
+      <h1 class="hero-title">Expériences Professionnelles</h1>
+      <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
+        Un parcours diversifié combinant data engineering, business intelligence et management opérationnel
+      </p>
+    </div>
+  </section>
+
+  <!-- TIMELINE DES EXPÉRIENCES -->
+  <section class="section">
+    <div class="container">
+      <div class="experience-timeline">
+        
+        <!-- L'ORÉAL - APPRENTI DATA ANALYST (2024-2025) -->
+        <div class="experience-card" data-aos="fade-left">
+          <div class="experience-header">
+            <div style="display:flex; gap: 20px; align-items:flex-start; flex:1;">
+              <img src="images/loreal-logo.png" alt="L'Oréal" class="experience-logo" onerror="this.style.display='none'">
+              <div class="experience-info">
+                <div class="experience-company">L'Oréal France</div>
+                <h3>Apprenti Data Analyst</h3>
+                <div class="experience-period">Septembre 2024 - Août 2025 • Paris, France</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="experience-description">
+            Centralisation et fiabilisation des données de ventes dans le Data Lake (GCP) 
+            afin d'améliorer la visibilité business et d'assurer une exploitation fiable 
+            par les équipes métiers.
+          </p>
+
+          <ul class="experience-achievements">
+            <li><strong>Automatisation des intégrations de données</strong> : Préparation et standardisation de fichiers de plus de 100 000 lignes par semaine permettant une ingestion continue et sans erreurs dans BigQuery</li>
+            <li><strong>Contrôle qualité des données</strong> : Mise en place de vérifications en préproduction et production, réduisant de 30% les anomalies détectées en amont</li>
+            <li><strong>Monitoring et reporting</strong> : Création de dashboards Power BI utilisés par 50+ utilisateurs métiers pour suivre en temps réel la qualité et la volumétrie des données</li>
+            <li><strong>Définition de KPIs de fiabilité</strong> : Amélioration de l'exhaustivité des données intégrées pour garantir la précision des analyses business</li>
+            <li><strong>Support utilisateurs et formation</strong> : Accompagnement des équipes business dans l'usage des dashboards, facilitant la prise de décision quotidienne</li>
+          </ul>
+        </div>
+
+        <!-- ACCOR - RÉCEPTIONNISTE (2023-2024) -->
+        <div class="experience-card" data-aos="fade-left">
+          <div class="experience-header">
+            <div style="display:flex; gap: 20px; align-items:flex-start; flex:1;">
+              <img src="images/accor-logo.png" alt="Accor" class="experience-logo" onerror="this.style.display='none'">
+              <div class="experience-info">
+                <div class="experience-company">Accor (ibis budget)</div>
+                <h3>Réceptionniste & Coordinateur Opérationnel</h3>
+                <div class="experience-period">Octobre 2023 - Septembre 2024 • Caen, France</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="experience-description">
+            Expérience managériale et analytique au sein d'une structure opérationnelle, 
+            où j'ai combiné gestion d'équipe, analyse de performance et optimisation des processus.
+          </p>
+
+          <ul class="experience-achievements">
+            <li><strong>Management d'équipe</strong> : Planification des ressources, coordination quotidienne de 10+ collaborateurs (réception, ménage, maintenance)</li>
+            <li><strong>Analyse de performance</strong> : Suivi des KPIs opérationnels (satisfaction client, taux d'occupation), analyse des résultats vs objectifs, reporting hebdomadaire à la hiérarchie</li>
+            <li><strong>Pilotage par la donnée</strong> : Mise en place de tableaux de bord Excel pour suivre satisfaction client, taux d'occupation et productivité des équipes</li>
+            <li><strong>Optimisation des processus</strong> : Réorganisation des flux de travail ayant amélioré l'efficacité opérationnelle et réduit les temps d'attente</li>
+            <li><strong>Leadership</strong> : Animation d'équipe, gestion des conflits, motivation des collaborateurs pour atteindre les objectifs fixés par la direction</li>
+            <li><strong>Communication transverse</strong> : Interface entre opérations terrain et direction, comptes rendus réguliers avec recommandations basées sur les données</li>
+          </ul>
+        </div>
+
+        <!-- COTENTIN - CHARGÉ D'ÉTUDE (Jan-Juin 2023) -->
+        <div class="experience-card" data-aos="fade-left">
+          <div class="experience-header">
+            <div style="display:flex; gap: 20px; align-items:flex-start; flex:1;">
+              <img src="images/cotentin-logo.png" alt="CA du Cotentin" class="experience-logo" onerror="this.style.display='none'">
+              <div class="experience-info">
+                <div class="experience-company">Communauté d'Agglomération du Cotentin</div>
+                <h3>Chargé d'Étude & Data Analyst</h3>
+                <div class="experience-period">Janvier 2023 - Juin 2023 • Cherbourg-en-Cotentin, France</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="experience-description">
+            Analyse de l'impact des meublés touristiques (Airbnb, Booking) sur l'économie locale, 
+            le logement et l'offre touristique afin de fournir aux élus et décideurs publics 
+            des recommandations basées sur la donnée.
+          </p>
+
+          <ul class="experience-achievements">
+            <li><strong>Intégration et fiabilisation des données</strong> : Collecte, nettoyage et modélisation de plusieurs dizaines de milliers d'annonces issues des plateformes de location pour constituer une base cohérente et exploitable</li>
+            <li><strong>Visualisations interactives</strong> : Conception de dashboards dynamiques (R/Python, Shiny, Plotly) permettant aux décideurs d'identifier rapidement les tendances de revenus, la saisonnalité et la typologie des logements</li>
+            <li><strong>Analyse territoriale</strong> : Mise en évidence des effets des meublés de tourisme sur le marché du logement (pression locative, prix) et sur l'économie locale (emplois, attractivité touristique)</li>
+            <li><strong>Livrables stratégiques</strong> : Production d'un rapport clair et illustré de 40+ pages, servant d'outil d'aide à la décision pour orienter les politiques locales</li>
+            <li><strong>Présentation aux élus</strong> : Restitution orale des résultats auprès des services internes et parties prenantes locales</li>
+          </ul>
+        </div>
+
+        <!-- ASSOCIATION - STAGIAIRE (Avr-Juil 2023) -->
+        <div class="experience-card" data-aos="fade-left">
+          <div class="experience-header">
+            <div style="display:flex; gap: 20px; align-items:flex-start; flex:1;">
+              <img src="images/association-logo.png" alt="Un Visage Un Sourire" class="experience-logo" onerror="this.style.display='none'">
+              <div class="experience-info">
+                <div class="experience-company">Un Visage Un Sourire</div>
+                <h3>Stagiaire Chargé d'Enquête Statistique</h3>
+                <div class="experience-period">Avril 2023 - Juillet 2023 • Caen, France</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="experience-description">
+            Mission axée sur l'accompagnement et le soutien aux bénéficiaires, 
+            avec une approche data-driven pour optimiser les actions de l'association.
+          </p>
+
+          <ul class="experience-achievements">
+            <li><strong>Évaluation des besoins</strong> : Identification des besoins des bénéficiaires et évaluation de leur satisfaction pour adapter les actions de l'association</li>
+            <li><strong>Organisation terrain</strong> : Participation à des maraudes de distribution alimentaire, garantissant une aide efficace et ciblée auprès de 100+ personnes par semaine</li>
+            <li><strong>Analyse qualitative</strong> : Traitement des retours terrain et des commentaires pour améliorer les interventions et l'efficacité des distributions</li>
+            <li><strong>Reporting stratégique</strong> : Rédaction de rapports synthétiques mensuels destinés à orienter les décisions stratégiques de la direction de l'association</li>
+            <li><strong>Amélioration continue</strong> : Optimisation de l'impact des actions sur le terrain et amélioration de 25% de la satisfaction des bénéficiaires</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2 class="cta-title">Mon parcours vous intéresse ?</h2>
+      <p class="cta-text">
+        Discutons de comment cette expérience peut bénéficier à votre équipe.
+      </p>
+      <div class="cta-buttons">
+        <a href="mailto:adjeguedeaime@gmail.com" class="btn btn-white btn-lg">Contactez-moi</a>
+        <a href="competences.html" class="btn btn-outline btn-lg">Voir mes compétences</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="images/ADJEGUEDE_PHOTO.jpg" alt="AA" class="footer-avatar">
+          <div>
+            <p class="footer-name">Aimé Adjeguede</p>
+            <p class="footer-title">Data Engineer & Analyst</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/aimeadjeguede/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/AIMELEBONDEV" target="_blank">GitHub</a>
+          <a href="mailto:adjeguedeaime@gmail.com">Email</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2025 Aimé Adjeguede. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
