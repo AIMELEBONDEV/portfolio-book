@@ -207,6 +207,108 @@
     </div>
   </section>
 
+  <!-- PROJET 1 - NBA DOCKER -->
+<section id="nba-docker" class="section">
+  <div class="project-detail" data-aos="fade-up">
+    <div class="project-header">
+      <div class="project-tag">Data Engineering</div>
+      <h1 class="project-title">NBA Analytics avec Docker & PostgreSQL</h1>
+      <p class="project-subtitle">Docker | PostgreSQL | Python | Data Integration</p>
+    </div>
+
+    <div class="tech-stack">
+      <span class="tech-badge">Docker</span>
+      <span class="tech-badge">PostgreSQL</span>
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Pandas</span>
+      <span class="tech-badge">SQL</span>
+      <span class="tech-badge">Jupyter</span>
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">🎯</span>Contexte & Objectifs</h2>
+      <div class="two-columns">
+        <div class="info-card">
+          <h3>Le Défi</h3>
+          <p>Intégrer de grandes quantités de données NBA (16 fichiers CSV) dans une base PostgreSQL déployée via Docker, en automatisant le processus d'import et en garantissant l'intégrité des données.</p>
+        </div>
+        <div class="info-card">
+          <h3>L'Objectif</h3>
+          <p>Créer une base de données relationnelle robuste permettant des analyses statistiques sur les joueurs, équipes et matchs NBA de 1980 à 2018.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">🏗️</span>Architecture & Pipeline</h2>
+      <img src="images/structure_docker_nba.png" 
+           alt="Architecture NBA Docker" 
+           class="project-image"
+           onerror="this.style.display='none'">
+      
+      <h3 style="color: var(--primary-dark); margin: 24px 0 16px; font-size: 1.3rem;">Workflow d'Intégration</h3>
+      <ul class="features-list">
+        <li>Déploiement d'un conteneur Docker PostgreSQL via docker-compose.yml</li>
+        <li>Définition de la structure des tables avec contraintes et clés primaires (create_tables.sql)</li>
+        <li>Automatisation de l'import via scripts Python dédiés (un par table/fichier)</li>
+        <li>Nettoyage et validation des données pour garantir l'intégrité référentielle</li>
+        <li>Analyses exploratoires dans Jupyter Notebook</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">📊</span>Analyses Réalisées</h2>
+      <ul class="features-list">
+        <li><strong>Statistiques joueurs</strong> : Extraction des informations et statistiques combinées des joueurs</li>
+        <li><strong>Matchs gagnants 2015</strong> : Identification des équipes victorieuses pour chaque match de la saison</li>
+        <li><strong>Classement par victoires</strong> : Calcul du nombre de victoires par équipe pour l'année 2018</li>
+        <li><strong>Performances historiques</strong> : Classement des joueurs ayant remporté le plus de victoires entre 1980 et 2000</li>
+        <li><strong>Actions fréquentes</strong> : Analyse comparative des actions par équipes (1980 vs 2015)</li>
+        <li><strong>BONUS</strong> : Étude des tendances de performance des équipes gagnantes au fil du temps</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2><span class="section-icon">🔧</span>Technologies & Architecture</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">16</div>
+          <p class="stat-label">Tables / Fichiers CSV intégrés</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">38 ans</div>
+          <p class="stat-label">De données NBA (1980-2018)</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <p class="stat-label">Automatisation via scripts Python</p>
+        </div>
+      </div>
+
+      <div class="info-card" style="margin-top: 32px; background: var(--bg-light); padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary);">
+        <h3 style="color: var(--primary-dark); margin-bottom: 12px;">💡 Compétences Démontrées</h3>
+        <ul style="margin: 0; padding-left: 20px; color: var(--text-medium);">
+          <li>Conteneurisation avec Docker pour environnements reproductibles</li>
+          <li>Modélisation de bases de données relationnelles avec contraintes d'intégrité</li>
+          <li>Automatisation de l'ETL avec Python (pandas, psycopg2)</li>
+          <li>Requêtes SQL complexes pour analyses statistiques</li>
+          <li>Nettoyage et validation de données massives</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a href="https://github.com/AIMELEBONDEV/projet_NBA" target="_blank" class="btn btn-primary btn-lg">
+        📂 Voir le code
+      </a>
+      <a href="https://github.com/AIMELEBONDEV/projet_NBA/blob/main/analyse_data/Analyse.ipynb" target="_blank" class="btn btn-outline btn-lg" style="border: 2px solid var(--primary); color: var(--primary);">
+        📖 Documentation
+      </a>
+    </div>
+  </div>
+</section>
+
+
   <!-- PROJET 1 - LAKERS -->
   <section id="lakers" class="section">
     <div class="project-detail" data-aos="fade-up">
